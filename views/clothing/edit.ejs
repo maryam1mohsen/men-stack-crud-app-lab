@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Edit Clothing</title>
+</head>
+<body>
+  <h1>Edit Clothing</h1>
+  <form action="/clothing/<%= clothing._id %>?_method=PUT" method="POST">
+    <label for="type">Type:</label>
+    <input type="text" name="type" value="<%= clothing.type %>" required>
+    <label for="color">Color:</label>
+    <input type="text" name="color" value="<%= clothing.color %>" required>
+    <label for="material">Material:</label>
+    <input type="text" name="material" value="<%= clothing.material %>" required>
+    <label for="quantity">Quantity:</label>
+    <input type="number" name="quantity" value="<%= clothing.quantity %>" required>
+    <button type="submit">Update Clothing</button>
+  </form>
+  <a href="/clothing">Back to Inventory</a>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Clothing Inventory</title>
+</head>
+<body>
+  <h1>Clothing Inventory</h1>
+  <a href="/clothing/new">Add New Clothing</a>
+  <ul>
+    <% clothes.forEach(clothing => { %>
+      <li>
+        <a href="/clothing/<%= clothing._id %>">
+          <%= clothing.type %> - <%= clothing.color %> - <%= clothing.material %> - <%= clothing.quantity %>
+        </a>
+        <form action="/clothing/<%= clothing._id %>?_method=DELETE" method="POST" style="display:inline;">
+          <button type="submit">Delete</button>
+        </form>
+        <a href="/clothing/<%= clothing._id %>/edit">Edit</a>
+      </li>
+    <% }) %>
+  </ul>
+</body>
+</html>

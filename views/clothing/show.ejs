@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Clothing Details</title>
+</head>
+<body>
+  <h1>Clothing Details</h1>
+  <p>Type: <%= clothing.type %></p>
+  <p>Color: <%= clothing.color %></p>
+  <p>Material: <%= clothing.material %></p>
+  <p>Quantity: <%= clothing.quantity %></p>
+  <a href="/clothing/<%= clothing._id %>/edit">Edit</a>
+  <form action="/clothing/<%= clothing._id %>?_method=DELETE" method="POST">
+    <button type="submit">Delete</button>
+  </form>
+  <a href="/clothing">Back to Inventory</a>
+</body>
+</html>

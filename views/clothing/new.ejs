@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>New Clothing</title>
+</head>
+<body>
+  <h1>Add New Clothing</h1>
+  <form action="/clothing" method="POST">
+    <label for="type">Type:</label>
+    <input type="text" name="type" required>
+    <label for="color">Color:</label>
+    <input type="text" name="color" required>
+    <label for="material">Material:</label>
+    <input type="text" name="material" required>
+    <label for="quantity">Quantity:</label>
+    <input type="number" name="quantity" required>
+    <button type="submit">Add Clothing</button>
+  </form>
+  <a href="/clothing">Back to Inventory</a>
+</body>
+</html>
